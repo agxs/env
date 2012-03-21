@@ -4,8 +4,6 @@ parse_git_branch() {
 
 PS1='${debian_chroot:+($debian_chroot)}\[\033[00;32m\]\u@\h\[\033[00m\] \[\033[00;34m\]\W\[\033[00;31m\]$(parse_git_branch)\[\033[00;34m\] \$ \[\033[00m\]'
 
-export JAVA_HOME=/usr/lib/jvm/java-6-sun
-
 export EDITOR=vim
 
 alias ispell='ispell -d british'
@@ -30,4 +28,12 @@ export HISTFILESIZE=100000
 export GREP_COLOR='00;38;32;157'
 
 export PATH=$HOME/bin:$PATH
+
+OS=`uname`
+DLIBBAUER=129.215.169.64
+AWK=nawk
+MYIP=`echo $SSH_CLIENT | $AWK '{ print $1 }'`
+if [ "$OS" = "SunOS" -a "$MYIP" = "$DLIBBAUER" ]; then
+  export TERM=xtermc
+fi
 
