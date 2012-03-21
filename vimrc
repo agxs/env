@@ -9,6 +9,7 @@ map <Down> gj
 imap <Down> <C-o>gj
 
 set showbreak=
+set nohlsearch
 
 colorscheme elflord
 highlight Comment ctermfg=blue
