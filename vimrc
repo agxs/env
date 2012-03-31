@@ -13,7 +13,7 @@ set nohlsearch
 
 map <F4> :set number!<CR>
 
-set t_Co=16
+set t_Co=256
 syntax enable
 set background=dark
 colorscheme solarized

@@ -33,6 +33,8 @@ export ACK_COLOR_match=green
 
 export PATH=$HOME/bin:$PATH
 
+export TERM=xterm-256color
+
 OS=`uname`
 DLIBBAUER=129.215.169.64
 AWK=nawk
