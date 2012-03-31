@@ -11,6 +11,11 @@ imap <Down> <C-o>gj
 set showbreak=
 set nohlsearch
 
-colorscheme elflord
-highlight Comment ctermfg=blue
+map <F4> :set number!<CR>
+
+set t_Co=16
+syntax enable
+set background=dark
+colorscheme solarized
+
 
