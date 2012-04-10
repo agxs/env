@@ -10,31 +10,31 @@
     <singleLineComment color="#586E75" bold="false" italic="true" />
     <multiLineComment color="#586E75" italic="true" />
     <commentTaskTag color="#D33682" bold="true" />
-    <javadoc color="#7D8C93" />
+    <javadoc color="#586E75" />
     <javadocLink color="#268BD2" bold="true" underline="true" strikethrough="false" />
     <javadocTag color="#DC322F" />
     <javadocKeyword color="#A082BD" />
-    <class color="#678CB1" />
-    <interface color="#678CB1" />
-    <method color="#678CB1" />
-    <methodDeclaration color="#268BD2" />
-    <bracket color="#DC322F" />
+    <class color="#839496" />
+    <interface color="#93a1a1" />
+    <method color="#839496" />
+    <methodDeclaration color="#839496" bold="false" />
+    <bracket color="#839496" />
     <number color="#2AA198" />
     <string color="#2AA198" />
-    <operator color="#B58900" />
-    <keyword color="#B58900" />
+    <operator color="#839496" bold="false" />
+    <keyword color="#859900" bold="false" />
     <annotation color="#CB4B16" />
-    <staticMethod color="#E0E2E4" />
-    <localVariable color="#268BD2" />
-    <localVariableDeclaration color="#268BD2" />
-    <field color="#678CB1" />
-    <staticField color="#678CB1" />
-    <staticFinalField color="#E0E2E4" />
+    <staticMethod color="#839496" />
+    <localVariable color="#839496" />
+    <localVariableDeclaration color="#839496" />
+    <field color="#b58900" />
+    <staticField color="#b58900" />
+    <staticFinalField color="#b58900" />
     <deprecatedMember color="#E0E2E4" />
-    <enum color="#E0E2E4" />
-    <inheritedMethod color="#E0E2E4" />
-    <abstractMethod color="#E0E2E4" />
-    <parameterVariable color="#E0E2E4" />
+    <enum color="#859900" />
+    <inheritedMethod color="#839496" />
+    <abstractMethod color="#839496" />
+    <parameterVariable color="#839496" />
     <typeArgument color="#B58900" />
     <typeParameter color="#B58900" />
     <constant color="#2AA198" />
