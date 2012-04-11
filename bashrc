@@ -1,3 +1,8 @@
+AS_IP=`echo $SSH_CLIENT | cut -d ' ' -f1`
+DLIBBAUER=129.215.169.64
+OS=`uname`
+if [ "$OS" != "SunOS" -o "$AS_IP" == "$DLIBBAUER" ] ; then
+
 parse_git_branch() {
   git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/*\s*\(.*\)/ (\1)/'
 }
@@ -35,12 +40,9 @@ export PATH=$HOME/bin:$PATH
 
 export TERM=xterm-256color
 
-OS=`uname`
-DLIBBAUER=129.215.169.64
-AWK=nawk
-MYIP=`echo $SSH_CLIENT | $AWK '{ print $1 }'`
-if [ "$OS" = "SunOS" -a "$MYIP" = "$DLIBBAUER" ]; then
+if [ "$OS" = "SunOS" ]; then
+  unalias rm # cause Solaris is weak
   export TERM=xtermc
 fi
 
-
+fi
