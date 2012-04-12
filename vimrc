@@ -10,6 +10,7 @@ imap <Down> <C-o>gj
 
 set showbreak=
 set nohlsearch
+set display=lastline
 
 map <F4> :set number!<CR>
 
