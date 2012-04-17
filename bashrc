@@ -7,8 +7,6 @@ parse_git_branch() {
   git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/*\s*\(.*\)/ (\1)/'
 }
 
-PS1='${debian_chroot:+($debian_chroot)}\[\033[00;32m\]\u@\h\[\033[00m\] \[\033[00;34m\]\W\[\033[00;31m\]$(parse_git_branch)\[\033[00;34m\] \$ \[\033[00m\]'
-
 export EDITOR=vim
 
 alias ispell='ispell -d british'
@@ -40,9 +38,16 @@ export PATH=$HOME/bin:$PATH
 
 export TERM=xterm-256color
 
+HOSTNAME_COLOUR=""
 if [ "$OS" = "SunOS" ]; then
   unalias rm # cause Solaris is weak
+  unalias grep
+  alias grep='ggrep --color=auto' # super weak
+  alias ls='ls -F'
   export TERM=xtermc
+  HOSTNAME_COLOUR='\[\033[00;31m\]'
 fi
+
+PS1="${debian_chroot:+($debian_chroot)}\[\033[00;32m\]\u@$HOSTNAME_COLOUR\h\[\033[00m\] \[\033[00;34m\]\W\[\033[00;31m\]$(parse_git_branch)\[\033[00;34m\] \$ \[\033[00m\]"
 
 fi
