@@ -48,6 +48,6 @@ if [ "$OS" = "SunOS" ]; then
   HOSTNAME_COLOUR='\[\033[00;31m\]'
 fi
 
-PS1="${debian_chroot:+($debian_chroot)}\[\033[00;32m\]\u@$HOSTNAME_COLOUR\h\[\033[00m\] \[\033[00;34m\]\W\[\033[00;31m\]$(parse_git_branch)\[\033[00;34m\] \$ \[\033[00m\]"
+PS1='${debian_chroot:+($debian_chroot)}\[\033[00;32m\]\u@'${HOSTNAME_COLOUR}'\h\[\033[00m\] \[\033[00;34m\]\W\[\033[00;31m\]$(parse_git_branch)\[\033[00;34m\] \$ \[\033[00m\]'
 
 fi
