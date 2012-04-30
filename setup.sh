@@ -8,6 +8,7 @@ ln -s $HOME/src/env/bashrc $HOME/.bashrc_as
 ln -s $HOME/src/env/vimrc $HOME/.vimrc
 ln -s $HOME/src/env/inputrc $HOME/.inputrc
 ln -s $HOME/src/env/solarized-universal.theme $HOME/.irssi/solarized-universal.theme
+ln -s $HOME/src/env/irssi_config $HOME/.irssi/config
 
 # Sets up gnome-terminal
 if [ -n "`which gconftool-2`" ]; then
