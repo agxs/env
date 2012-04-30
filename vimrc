@@ -19,4 +19,6 @@ syntax enable
 set background=dark
 colorscheme solarized
 
-
+hi normal ctermbg=none
+map <F12> :hi normal ctermbg=none<CR>
+map <S-F12> :hi normal ctermbg=black<CR>
