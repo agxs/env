@@ -2,7 +2,9 @@
 
 rm $HOME/.bashrc_as \
    $HOME/.vimrc \
-   $HOME/.inputrc
+   $HOME/.inputrc \
+   $HOME/.irssi/solarized-universal.theme \
+   $HOME/.irssi/config
 
 ln -s $HOME/src/env/bashrc $HOME/.bashrc_as
 ln -s $HOME/src/env/vimrc $HOME/.vimrc
