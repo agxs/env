@@ -34,6 +34,8 @@ plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
 
+unsetopt correct_all
+
 # Customize to your needs...
 
 export TERM=xterm-256color
