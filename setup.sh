@@ -13,6 +13,7 @@ ln -s $HOME/src/env/inputrc $HOME/.inputrc
 ln -s $HOME/src/env/solarized-universal.theme $HOME/.irssi/solarized-universal.theme
 ln -s $HOME/src/env/irssi_config $HOME/.irssi/config
 ln -s $HOME/src/env/zshrc $HOME/.zshrc
+ln -s $HOME/src/env/agxs.zsh-theme $HOME/.oh-my-zsh/themes/agxs.zsh-theme
 
 # Sets up gnome-terminal
 if [ -n "`which gconftool-2`" ]; then
