@@ -46,6 +46,7 @@ export TERM=xterm-256color
 export EDITOR=vim
 export PAGER=less
 
+alias vless='vim -u /usr/share/vim/vimcurrent/macros/less.vim'
 alias enscript='enscript -2 -G -E -r -j'
 alias rm='rm -v'
 alias lui='rdesktop -g 1024x768 -u aseales -d ed -p - lui.edina.ac.uk'
