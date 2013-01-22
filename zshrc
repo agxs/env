@@ -37,8 +37,14 @@ source $ZSH/oh-my-zsh.sh
 unsetopt correct_all
 
 # Better bindings for up/down keys to search history
-bindkey "${terminfo[kcuu1]}" history-beginning-search-backward
-bindkey "${terminfo[kcud1]}" history-beginning-search-forward
+if [ `uname` = "Linux" ]
+then
+  bindkey "${terminfo[kcuu1]}" history-beginning-search-backward
+  bindkey "${terminfo[kcud1]}" history-beginning-search-forward
+else
+  bindkey '^[[A' history-beginning-search-backward
+  bindkey '^[[B' history-beginning-search-forward
+fi
 
 # Customize to your needs...
 
