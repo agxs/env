@@ -56,6 +56,7 @@ alias assynt3='rdesktop -g 1024x768 -u aseales -d ed -p - assynt3.edina.ac.uk'
 alias culmor1='rdesktop -g 1024x768 -u aseales -d ed -p - culmor1-at.edina.ac.uk'
 alias culmor2='rdesktop -g 1024x768 -u aseales -d ed -p - culmor2-at.edina.ac.uk'
 alias bc='bc -l'
+alias cpan='cpanm'
 
 if [ `uname` != "Darwin" ]
 then
