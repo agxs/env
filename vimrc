@@ -13,6 +13,7 @@ set nohlsearch
 set display=lastline
 
 map <F4> :set number!<CR>
+map <S-F4> :set relativenumber!<CR>
 
 set t_Co=256
 syntax enable
