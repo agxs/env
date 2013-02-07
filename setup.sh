@@ -6,7 +6,8 @@ rm $HOME/.bashrc_as \
    $HOME/.irssi/solarized-universal.theme \
    $HOME/.irssi/config \
    $HOME/.zshrc \
-   $HOME/.tmux.conf
+   $HOME/.tmux.conf \
+   $HOME/.oh-my-zsh/themes/agxs.zsh-theme
 
 ln -s $HOME/src/env/bashrc $HOME/.bashrc_as
 ln -s $HOME/src/env/vimrc $HOME/.vimrc
