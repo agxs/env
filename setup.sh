@@ -5,7 +5,8 @@ rm $HOME/.bashrc_as \
    $HOME/.inputrc \
    $HOME/.irssi/solarized-universal.theme \
    $HOME/.irssi/config \
-   $HOME/.zshrc
+   $HOME/.zshrc \
+   $HOME/.tmux.conf
 
 ln -s $HOME/src/env/bashrc $HOME/.bashrc_as
 ln -s $HOME/src/env/vimrc $HOME/.vimrc
@@ -14,6 +15,7 @@ ln -s $HOME/src/env/solarized-universal.theme $HOME/.irssi/solarized-universal.t
 ln -s $HOME/src/env/irssi_config $HOME/.irssi/config
 ln -s $HOME/src/env/zshrc $HOME/.zshrc
 ln -s $HOME/src/env/agxs.zsh-theme $HOME/.oh-my-zsh/themes/agxs.zsh-theme
+ln -s $HOME/src/env/tmux.conf $HOME/.tmux.conf
 
 # Sets up gnome-terminal
 if [ -n "`which gconftool-2`" ]; then
