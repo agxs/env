@@ -1,4 +1,5 @@
 source ~/.vim/vimrc
+execute pathogen#infect('bundle/{}', '~/src/env/vimbundle/{}')
 
 set ts=2
 set cindent shiftwidth=2
