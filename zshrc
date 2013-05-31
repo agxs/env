@@ -30,7 +30,7 @@ CASE_SENSITIVE="true"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git nyan mvn extract)
+plugins=(git nyan mvn extract safe-paste vagrant)
 
 source $ZSH/oh-my-zsh.sh
 
