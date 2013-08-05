@@ -4,3 +4,6 @@
 [submodule "vimbundle/vim-bundler"]
 	path = vimbundle/vim-bundler
 	url = https://github.com/tpope/vim-bundler.git
+[submodule "vimbundle/jedi-vim"]
+	path = vimbundle/jedi-vim
+	url = https://github.com/davidhalter/jedi-vim.git

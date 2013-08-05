@@ -28,3 +28,8 @@ map <S-F12> :hi normal ctermbg=black<CR>
 " sudo write
 ca w!! w !sudo tee >/dev/null "%"
 
+autocmd FileType python set omnifunc=pythoncomplete#Complete
+autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
+autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
+autocmd FileType css set omnifunc=csscomplete#CompleteCSS
+
