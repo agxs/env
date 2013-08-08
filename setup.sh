@@ -1,7 +1,7 @@
 #!/bin/bash
 
 rm $HOME/.bashrc_as \
-   $HOME/.vimrc \
+   $HOME/.vimrc.local \
    $HOME/.inputrc \
    $HOME/.irssi/solarized-universal.theme \
    $HOME/.irssi/config \
@@ -10,7 +10,7 @@ rm $HOME/.bashrc_as \
    $HOME/.oh-my-zsh/themes/agxs.zsh-theme
 
 ln -s $HOME/src/env/bashrc $HOME/.bashrc_as
-ln -s $HOME/src/env/vimrc $HOME/.vimrc
+ln -s $HOME/src/env/vimrc.local $HOME/.vimrc.local
 ln -s $HOME/src/env/inputrc $HOME/.inputrc
 ln -s $HOME/src/env/solarized-universal.theme $HOME/.irssi/solarized-universal.theme
 ln -s $HOME/src/env/irssi_config $HOME/.irssi/config

@@ -1,6 +1,6 @@
-My Bash and Vim envorinment.
+My Bash and Vim environment.
 
-Vim enviroment requires a checkout from [Vim-Settings](https://github.com/shumphrey/Vim-Settings).
+Vim environment requires a checkout from [spf13-vim](https://github.com/spf13/spf13-vim).
 
 Need to add:
 
