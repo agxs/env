@@ -1,22 +1,13 @@
 #!/bin/bash
 
-rm $HOME/.bashrc_as \
-   $HOME/.vimrc.local \
-   $HOME/.inputrc \
-   $HOME/.irssi/solarized-universal.theme \
-   $HOME/.irssi/config \
-   $HOME/.zshrc \
-   $HOME/.tmux.conf \
-   $HOME/.oh-my-zsh/themes/agxs.zsh-theme
-
-ln -s $HOME/src/env/bashrc $HOME/.bashrc_as
-ln -s $HOME/src/env/vimrc.local $HOME/.vimrc.local
-ln -s $HOME/src/env/inputrc $HOME/.inputrc
-ln -s $HOME/src/env/solarized-universal.theme $HOME/.irssi/solarized-universal.theme
-ln -s $HOME/src/env/irssi_config $HOME/.irssi/config
-ln -s $HOME/src/env/zshrc $HOME/.zshrc
-ln -s $HOME/src/env/agxs.zsh-theme $HOME/.oh-my-zsh/themes/agxs.zsh-theme
-ln -s $HOME/src/env/tmux.conf $HOME/.tmux.conf
+ln -sf $HOME/src/env/bashrc $HOME/.bashrc_as
+ln -sf $HOME/src/env/vimrc.local $HOME/.vimrc.local
+ln -sf $HOME/src/env/inputrc $HOME/.inputrc
+ln -sf $HOME/src/env/solarized-universal.theme $HOME/.irssi/solarized-universal.theme
+ln -sf $HOME/src/env/irssi_config $HOME/.irssi/config
+ln -sf $HOME/src/env/zshrc $HOME/.zshrc
+ln -sf $HOME/src/env/agxs.zsh-theme $HOME/.oh-my-zsh/themes/agxs.zsh-theme
+ln -sf $HOME/src/env/tmux.conf $HOME/.tmux.conf
 
 # Sets up gnome-terminal
 if [ -n "`which gconftool-2`" ]; then
