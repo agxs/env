@@ -21,3 +21,5 @@ map <tab> <C-W>w
 
 nnoremap <F3> :NumbersToggle<CR>
 nnoremap <F4> :NumbersOnOff<CR>
+
+UnBundle 'honza/vim-snippets'
