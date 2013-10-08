@@ -22,4 +22,8 @@ map <tab> <C-W>w
 nnoremap <F3> :NumbersToggle<CR>
 nnoremap <F4> :NumbersOnOff<CR>
 
+" UltiSnips config
+let g:UltiSnipsSnippetsDir="~/src/env/UltiSnips"
+let g:UltiSnipsEditSplit="vertical"
+
 UnBundle 'honza/vim-snippets'
