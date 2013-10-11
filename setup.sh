@@ -2,6 +2,7 @@
 
 ln -sf $HOME/src/env/bashrc $HOME/.bashrc_as
 ln -sf $HOME/src/env/vimrc.local $HOME/.vimrc.local
+ln -sf $HOME/src/env/vimrc.bundles.local $HOME/.vimrc.bundles.local
 ln -sf $HOME/src/env/inputrc $HOME/.inputrc
 ln -sf $HOME/src/env/zshrc $HOME/.zshrc
 ln -sf $HOME/src/env/agxs.zsh-theme $HOME/.oh-my-zsh/themes/agxs.zsh-theme
