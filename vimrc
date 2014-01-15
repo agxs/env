@@ -203,6 +203,8 @@ let g:UltiSnipsEditSplit="vertical"
 "
 " Plugins {
 
+    set number
+
     " Misc {
         let g:NERDShutUp=1
         let b:match_ignorecase = 1
