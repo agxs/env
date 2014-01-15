@@ -1,0 +1,10 @@
+snippet file "Complete File resource type" b
+file { '${1:name}':
+  ensure => present,
+  mode   => '${2:mode}',
+  owner  => '${3:owner}',
+  group  => '${4:group}',
+  source => 'puppet://${5:path}',
+}
+endsnippet
+
