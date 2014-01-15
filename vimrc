@@ -201,6 +201,7 @@ let g:solarized_visibility="high"
 " UltiSnips config
 let g:UltiSnipsSnippetsDir="~/src/env/UltiSnips"
 let g:UltiSnipsEditSplit="vertical"
+set runtimepath+=~/src/env
 "
 " Plugins {
 
