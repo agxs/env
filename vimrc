@@ -15,6 +15,10 @@ let g:solarized_termcolors=16
 set background=dark
 color solarized
 colorscheme solarized
+let g:solarized_termtrans=1
+let g:solarized_contrast="high"
+let g:solarized_visibility="high"
+
 
 " basic settings
     filetype plugin indent on   " Automatically detect file types.
