@@ -102,6 +102,7 @@ let g:solarized_visibility="high"
     " Formatting
     set autoindent                  " Indent at the same level of the previous line
     set wrap
+    set expandtab
     set ts=2
     set cindent shiftwidth=2
     set tabstop=2
