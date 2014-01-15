@@ -54,12 +54,12 @@ export PAGER=less
 
 alias enscript='enscript -2 -G -E -r -j'
 alias rm='rm -v'
-alias lui='rdesktop -g 1024x768 -u aseales -d ed -p - lui.edina.ac.uk'
-alias assynt1='rdesktop -g 1024x768 -u aseales -d ed -p - assynt1.edina.ac.uk'
-alias assynt2='rdesktop -g 1024x768 -u aseales -d ed -p - assynt2.edina.ac.uk'
-alias assynt3='rdesktop -g 1024x768 -u aseales -d ed -p - assynt3.edina.ac.uk'
-alias culmor1='rdesktop -g 1024x768 -u aseales -d ed -p - culmor1-at.edina.ac.uk'
-alias culmor2='rdesktop -g 1024x768 -u aseales -d ed -p - culmor2-at.edina.ac.uk'
+alias lui="rdesktop -g 1024x768 -u $USER -d ed -p - lui.edina.ac.uk"
+alias assynt1="rdesktop -g 1024x768 -u $USER -d ed -p - assynt1.edina.ac.uk"
+alias assynt2="rdesktop -g 1024x768 -u $USER -d ed -p - assynt2.edina.ac.uk"
+alias assynt3="rdesktop -g 1024x768 -u $USER -d ed -p - assynt3.edina.ac.uk"
+alias culmor1="rdesktop -g 1024x768 -u $USER -d ed -p - culmor1-at.edina.ac.uk"
+alias culmor2="rdesktop -g 1024x768 -u $USER -d ed -p - culmor2-at.edina.ac.uk"
 alias bc='bc -l'
 alias cpan='cpanm'
 
