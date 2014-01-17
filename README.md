@@ -1,4 +1,4 @@
-My Bash and Vim environment.
+My ZSH and Vim environment(plus legacy Bash stuff).
 ---
 
 Vim environment based on [spf13-vim](https://github.com/spf13/spf13-vim).
