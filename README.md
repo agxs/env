@@ -24,4 +24,4 @@ source ~/.bashrc_as
 
 to the end of your `.bashrc`, but the bash stuff is really out of date so I highly recommend using the ZSH configuration.
 
-The ZSH profile relies on [Oh My ZSH](https://github.com/robbyrussell/oh-my-zsh). For the theme to look correct you'll need to edit your console font to have extra symbols. It's basically `agnoster` so just follow the documentation for setting that up.
+The ZSH profile relies on [Oh My ZSH](https://github.com/robbyrussell/oh-my-zsh). For the theme to look correct you'll need to edit your console font to have extra symbols. It's basically `agnoster` so just follow the [documentation](https://powerline.readthedocs.org/en/latest/fontpatching.html) for setting that up. You'll probably need stuff from [powerline](https://github.com/Lokaltog/vim-powerline.git) too. OS X users can just use the pre-patched fonts. On Linux I had to patch it myself.
