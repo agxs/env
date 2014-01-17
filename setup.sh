@@ -17,6 +17,7 @@ ln -sf $HOME/src/env/vimrc.bundles $HOME/.vimrc.bundles
 ln -sf $HOME/src/env/inputrc $HOME/.inputrc
 ln -sf $HOME/src/env/zshrc $HOME/.zshrc
 ln -sf $HOME/src/env/agxs.zsh-theme $HOME/.oh-my-zsh/themes/agxs.zsh-theme
+ln -sf $HOME/src/env/vagrant.plugin.zsh $HOME/.oh-my-zsh/plugins/vagrant/vagrant.plugin.zsh
 ln -sf $HOME/src/env/tmux.conf $HOME/.tmux.conf
 if [[ -d "$HOME/.irssi" ]]; then
   ln -sf $HOME/src/env/solarized-universal.theme $HOME/.irssi/solarized-universal.theme
