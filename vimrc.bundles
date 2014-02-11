@@ -43,7 +43,6 @@ if count(g:spf13_bundle_groups, 'general')
     Bundle 'Lokaltog/powerline', {'rtp':'/powerline/bindings/vim'}
 
     Bundle 'Lokaltog/vim-easymotion'
-    Bundle 'godlygeek/csapprox'
     Bundle 'jistr/vim-nerdtree-tabs'
     Bundle 'flazz/vim-colorschemes'
     Bundle 'mbbill/undotree'
