@@ -63,12 +63,14 @@ alias culmor2="rdesktop -g 1024x768 -u $USER -d ed -p - culmor2-at.edina.ac.uk"
 alias bc='bc -l'
 alias cpan='cpanm'
 
+alias less='less -R'
 if [ `uname` != "Darwin" ]
 then
-  alias ack='ack-grep'
+  alias ack='ack-grep --color'
   alias ssh='ssh -X'
   alias vless='vim -u /usr/share/vim/vimcurrent/macros/less.vim'
 else
+  alias ack='ack --color'
   alias vless='vim -u /usr/share/vim/vim73/macros/less.vim'
   export LSCOLORS=exgxbxdxcxegedabagacad
 fi
