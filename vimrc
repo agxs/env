@@ -27,7 +27,7 @@ syntax on                   " Syntax highlighting
 set mouse=a                 " Automatically enable mouse usage
 set mousehide               " Hide the mouse cursor while typing
 scriptencoding utf-8
-set synmaxcol=256           " Don't syntax highlight massive lines for speed
+set synmaxcol=512           " Don't syntax highlight massive lines for speed
 
 " switch to current file directory when opening a buffer
 autocmd BufEnter * if bufname("") !~ "^\[A-Za-z0-9\]*://" | lcd %:p:h | endif
