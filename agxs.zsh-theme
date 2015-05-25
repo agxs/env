@@ -20,31 +20,33 @@ function _git_info() {
   fi
 }
 
-function _vagrant_info() {
-  local STATE=$(vagrant_state)
-  if [[ -n $STATE ]]; then
-    local BG_COLOR
-    local TEXT
-    if [[ $STATE = "running" ]]; then
-      BG_COLOR=green
-      TEXT="VM Up"
-    elif [[ $STATE = "poweroff" ]]; then
-      BG_COLOR=yellow
-      TEXT="VM Down"
-    elif [[ $STATE = "not" ]]; then
-      BG_COLOR="red"
-      TEXT="VM Not Created"
-    elif [[ $STATE = "aborted" ]]; then
-      BG_COLOR="red"
-      TEXT="VM Aborted"
-    fi
-    echo "%{%K{$BG_COLOR}%}⮀%{%F{black}%} $TEXT %{%F{$BG_COLOR}%K{blue}%}"
-  fi
-}
+#function _vagrant_info() {
+  #local STATE=$(vagrant_state)
+  #if [[ -n $STATE ]]; then
+    #local BG_COLOR
+    #local TEXT
+    #if [[ $STATE = "running" ]]; then
+      #BG_COLOR=green
+      #TEXT="VM Up"
+    #elif [[ $STATE = "poweroff" ]]; then
+      #BG_COLOR=yellow
+      #TEXT="VM Down"
+    #elif [[ $STATE = "not" ]]; then
+      #BG_COLOR="red"
+      #TEXT="VM Not Created"
+    #elif [[ $STATE = "aborted" ]]; then
+      #BG_COLOR="red"
+      #TEXT="VM Aborted"
+    #fi
+    #echo "%{%K{$BG_COLOR}%}⮀%{%F{black}%} $TEXT %{%F{$BG_COLOR}%K{blue}%}"
+  #fi
+#}
 
 PROMPT_HOST='%{%b%F{gray}%K{black}%} %(?.%{%F{green}%}✔.%{%F{red}%}✘)%{%F{gray}%} %n@%m %{%F{black}%}'
 PROMPT_DIR='%{%F{white}%} %1~ '
 PROMPT_SU='%(!.%{%k%F{blue}%K{black}%}⮀%{%F{yellow}%} ⚡ %{%k%F{black}%}.%{%k%F{blue}%})⮀%{%f%k%b%}'
 
+#$PROMPT_HOST$(_vagrant_info)$(_git_info)$PROMPT_DIR$PROMPT_SU '
+
 PROMPT='%{%f%b%k%}
-$PROMPT_HOST$(_vagrant_info)$(_git_info)$PROMPT_DIR$PROMPT_SU '
+$PROMPT_HOST$(_git_info)$PROMPT_DIR$PROMPT_SU '
