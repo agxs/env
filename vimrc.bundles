@@ -70,6 +70,7 @@ if count(g:spf13_bundle_groups, 'programming')
     if executable('ctags')
         Bundle 'majutsushi/tagbar'
     endif
+    Plugin 'editorconfig/editorconfig-vim'
 endif
 
 " Python
