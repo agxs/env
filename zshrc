@@ -46,6 +46,19 @@ unsetopt correct_all
   bindkey '^[[B' history-beginning-search-forward
 #fi
 
+# Fast ctrl-z to re-enter vim
+fancy-ctrl-z () {
+  if [[ $#BUFFER -eq 0 ]]; then
+    BUFFER="fg"
+    zle accept-line
+  else
+    zle push-input
+    zle clear-screen
+  fi
+}
+zle -N fancy-ctrl-z
+bindkey '^Z' fancy-ctrl-z
+
 # Customize to your needs...
 
 export TERM=xterm-256color
