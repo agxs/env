@@ -123,7 +123,19 @@ autocmd FileType haskell setlocal nospell
 
 " The default leader is '\', but many people prefer ',' as it's in a standard
 " location.
-let mapleader = ','
+let mapleader = "\<Space>"
+
+" file open/write
+nnoremap <Leader>o :CtrlP<CR>
+nnoremap <Leader>w :w<CR>
+
+" quicker copy and pasting
+vmap <Leader>y "+y
+vmap <Leader>d "+d
+nmap <Leader>p "+p
+nmap <Leader>P "+P
+vmap <Leader>p "+p
+vmap <Leader>P "+P
 
 " Easier moving in tabs and windows
 " The lines conflict with the default digraph mapping of <C-K>
