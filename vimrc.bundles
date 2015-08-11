@@ -12,6 +12,7 @@ call vundle#rc()
 Bundle 'gmarik/vundle'
 if has("python")
   Bundle 'SirVer/ultisnips'
+  Plugin 'honza/vim-snippets'
 endif
 Bundle 'rodjek/vim-puppet'
 Bundle 'MarcWeber/vim-addon-mw-utils'
