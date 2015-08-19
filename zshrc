@@ -86,6 +86,7 @@ else
   alias ack='ack --color'
   alias vless='vim -u /usr/share/vim/vim73/macros/less.vim'
   alias krb='kinit --kdc-hostname=EASE.ED.AC.UK aseales@EASE.ED.AC.UK'
+  alias top='top -o cpu'
   export JAVA_HOME=`/usr/libexec/java_home -v 1.8`
   export LSCOLORS=exgxbxdxcxegedabagacad
 fi
