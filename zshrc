@@ -75,6 +75,7 @@ alias culmor1="rdesktop -g 1024x768 -u $USER -d ed -p - culmor1-at.edina.ac.uk"
 alias culmor2="rdesktop -g 1024x768 -u $USER -d ed -p - culmor2-at.edina.ac.uk"
 alias bc='bc -l'
 alias cpan='cpanm'
+alias irssi='TERM=screen-256color irssi'
 
 alias less='less -R'
 if [ `uname` != "Darwin" ]
