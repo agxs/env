@@ -90,6 +90,7 @@ if count(g:spf13_bundle_groups, 'javascript')
     Bundle 'pangloss/vim-javascript'
     Bundle 'briancollins/vim-jst'
     Bundle 'kchmck/vim-coffee-script'
+    Plugin 'leafgarland/typescript-vim'
 endif
 
 " Java
