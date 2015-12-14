@@ -24,6 +24,8 @@ if [[ -d "$HOME/.irssi" ]]; then
   ln -sf $HOME/src/env/solarized-universal.theme $HOME/.irssi/solarized-universal.theme
   ln -sf $HOME/src/env/irssi_config $HOME/.irssi/config
 fi
+mkdir -p $HOME/.config/Code/User
+ln -sf $HOME/src/env/settings.json $HOME/.config/Code/User/settings.json
 
 # Sets up gnome-terminal
 if [ -e "`which gconftool-2`" ]; then
