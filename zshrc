@@ -80,7 +80,7 @@ alias irssi='TERM=screen-256color irssi'
 alias less='less -R'
 if [ `uname` != "Darwin" ]
 then
-  alias ack='ack-grep --color'
+  alias ack='ack --color'
   alias ssh='ssh -X'
   alias vless='vim -u /usr/share/vim/vimcurrent/macros/less.vim'
 else
