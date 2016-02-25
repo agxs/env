@@ -97,8 +97,5 @@ export LS_COLORS='rs=0:di=34:ln=36:mh=00:pi=33:so=35:do=35:bd=33:cd=33:or=31:su=
 zstyle ':completion:*:default' list-colors ${(s.:.)LS_COLORS}
 
 export PATH=$HOME/.ndenv/bin:$HOME/src/env/bin:$PATH
-ndenv_path=$(which ndenv)
-if [[ -x "$ndenv_path" ]]; then
-  eval "$(ndenv init -)"
-fi
+type ndenv >/dev/null 2>&1 || eval "$(ndenv init -)"
 
