@@ -99,3 +99,5 @@ zstyle ':completion:*:default' list-colors ${(s.:.)LS_COLORS}
 export PATH=$HOME/.ndenv/bin:$HOME/src/env/bin:$PATH
 type ndenv >/dev/null 2>&1 && eval "$(ndenv init -)"
 
+
+export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
