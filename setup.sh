@@ -27,6 +27,11 @@ fi
 mkdir -p $HOME/.config/Code/User
 ln -sf $HOME/src/env/settings.json $HOME/.config/Code/User/settings.json
 
+# remove stupid ubuntu overlay scrollbars
+if [ -e "`which gsettings`" ]; then
+  gsettings set com.canonical.desktop.interface scrollbar-mode normal
+fi
+
 # Sets up gnome-terminal
 if [ -e "`which gconftool-2`" ]; then
   gconftool-2 --set "/apps/gnome-terminal/profiles/Default/use_theme_background" --type bool false
