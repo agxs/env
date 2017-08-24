@@ -198,6 +198,14 @@ prompt_virtualenv() {
   fi
 }
 
+prompt_docker_host() {
+  if [[ ! -z "$DOCKER_MACHINE_NAME" ]]; then
+    prompt_segment red default "\xF0\x9F\x90\xB3: '$DOCKER_MACHINE_NAME'"
+  elif [[ ! -z "$DOCKER_HOST" ]]; then
+    prompt_segment red default "\xF0\x9F\x90\xB3: '$DOCKER_HOST'"
+  fi
+}
+
 # Status:
 # - was there an error
 # - am I root
@@ -212,16 +220,22 @@ prompt_status() {
   [[ -n "$symbols" ]] && prompt_segment black default "$symbols"
 }
 
+prompt_space() {
+  echo
+}
+
 ## Main prompt
 build_prompt() {
   RETVAL=$?
+  prompt_space
   prompt_status
-  prompt_virtualenv
+#  prompt_virtualenv
   prompt_context
   prompt_dir
   prompt_git
-  prompt_bzr
-  prompt_hg
+#  prompt_bzr
+#  prompt_hg
+  prompt_docker_host
   prompt_end
 }
 
