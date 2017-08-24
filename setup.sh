@@ -17,6 +17,7 @@ ln -sf $HOME/src/env/vimrc.bundles $HOME/.vimrc.bundles
 ln -sf $HOME/src/env/inputrc $HOME/.inputrc
 ln -sf $HOME/src/env/zshrc $HOME/.zshrc
 ln -sf $HOME/src/env/agxs.zsh-theme $HOME/.oh-my-zsh/themes/agxs.zsh-theme
+ln -sf $HOME/src/env/agxs2.zsh-theme $HOME/.oh-my-zsh/themes/agxs2.zsh-theme
 ln -sf $HOME/src/env/vagrant.plugin.zsh $HOME/.oh-my-zsh/plugins/vagrant/vagrant.plugin.zsh
 ln -sf $HOME/src/env/tmux.conf $HOME/.tmux.conf
 ln -sf $HOME/src/env/ackrc $HOME/.ackrc
