@@ -80,7 +80,7 @@ set statusline+=\ [%{&ff}/%Y]            " Filetype
 set statusline+=\ [%{getcwd()}]          " Current dir
 set statusline+=%=%-14.(%l,%c%V%)\ %p%%  " Right aligned file nav info
 
-let g:airline_theme='powerlineish'       " airline users use the powerline theme
+"let g:airline_theme='powerlineish'       " airline users use the powerline theme
 let g:airline_powerline_fonts=1          " and the powerline fonts
 
 set nofoldenable                " Turn off code folding

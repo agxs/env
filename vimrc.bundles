@@ -28,9 +28,8 @@ if count(g:spf13_bundle_groups, 'general')
     Bundle 'altercation/vim-colors-solarized'
     Bundle 'spf13/vim-colors'
     Bundle 'tpope/vim-surround'
-    if has("python")
-      Bundle 'Lokaltog/powerline', {'rtp':'/powerline/bindings/vim'}
-    endif
+    Bundle 'tpope/vim-fugitive'
+    Bundle 'vim-airline/vim-airline'
     Bundle 'mbbill/undotree'
     Bundle 'myusuf3/numbers.vim'
     if !exists('g:spf13_no_views')
@@ -43,6 +42,7 @@ endif
 if count(g:spf13_bundle_groups, 'programming')
     " Pick one of the checksyntax, jslint, or syntastic
     Bundle 'scrooloose/syntastic'
+    Bundle 'scrooloose/nerdcommenter'
     Bundle 'godlygeek/tabular'
     Plugin 'editorconfig/editorconfig-vim'
 endif
