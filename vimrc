@@ -112,13 +112,6 @@ set tabstop=2
 set softtabstop=2
 set pastetoggle=<F12>           " pastetoggle (sane indentation on pastes)
 
-autocmd BufNewFile,BufRead *.coffee set filetype=coffee
-
-" Workaround vim-commentary for Haskell
-autocmd FileType haskell setlocal commentstring=--\ %s
-" Workaround broken colour highlighting in Haskell
-autocmd FileType haskell setlocal nospell
-
 " Key (re)Mappings {
 
 " The default leader is '\', but many people prefer ',' as it's in a standard
@@ -256,12 +249,6 @@ set runtimepath+=~/src/env                          " Load custom snippets
 
 " Ctags {
     set tags=./tags;/,~/.vimtags
-" }
-
-" AutoCloseTag {
-    " Make it so AutoCloseTag works for xml and xhtml files as well
-    au FileType xhtml,xml ru ftplugin/html/autoclosetag.vim
-    nmap <Leader>ac <Plug>ToggleAutoCloseMappings
 " }
 
 " NerdTree {
