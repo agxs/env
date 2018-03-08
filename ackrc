@@ -2,3 +2,4 @@
 --ignore-dir=node_modules
 --ignore-dir=jspm_packages
 --ignore-dir=tmp
+--type-set=scss:ext:scss,scss
