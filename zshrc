@@ -30,7 +30,7 @@ CASE_SENSITIVE="true"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(sudo git nyan mvn extract safe-paste docker)
+plugins=(sudo git nyan mvn extract safe-paste docker colored-man tmux ng)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -76,6 +76,7 @@ alias culmor2="rdesktop -g 1024x768 -u $USER -d ed -p - culmor2-at.edina.ac.uk"
 alias bc='bc -l'
 alias cpan='cpanm'
 alias irssi='TERM=screen-256color irssi'
+alias parallel='parallel --citation'
 
 alias less='less -R'
 if [ `uname` != "Darwin" ]
@@ -88,6 +89,7 @@ else
   alias vless='vim -u /usr/share/vim/vim73/macros/less.vim'
   alias krb='kinit --kdc-hostname=EASE.ED.AC.UK aseales@EASE.ED.AC.UK'
   alias top='top -o cpu'
+  alias chrome-debug='/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --remote-debugging-port=9222'
   export JAVA_HOME=`/usr/libexec/java_home -v 1.8`
   export LSCOLORS=exgxbxdxcxegedabagacad
 fi
