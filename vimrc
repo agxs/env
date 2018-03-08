@@ -362,6 +362,8 @@ set runtimepath+=~/src/env                          " Load custom snippets
     nnoremap <silent> <leader>gg :GitGutterToggle<CR>
 "}
 
+let g:fugitive_gitlab_domains = ['https://gitlab.edina.ac.uk']
+
 " UndoTree {
     nnoremap <Leader>u :UndotreeToggle<CR>
     " If undotree is opened, it is likely one wants to interact with it.

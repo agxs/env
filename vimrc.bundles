@@ -29,6 +29,7 @@ if count(g:spf13_bundle_groups, 'general')
     Bundle 'spf13/vim-colors'
     Bundle 'tpope/vim-surround'
     Bundle 'tpope/vim-fugitive'
+    Bundle 'shumphrey/fugitive-gitlab.vim'
     Bundle 'vim-airline/vim-airline'
     Bundle 'mbbill/undotree'
     Bundle 'myusuf3/numbers.vim'
