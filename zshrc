@@ -77,6 +77,7 @@ alias bc='bc -l'
 alias cpan='cpanm'
 alias irssi='TERM=screen-256color irssi'
 alias parallel='parallel --citation'
+alias openssl_verify='openssl s_client -connect'
 
 alias less='less -R'
 if [ `uname` != "Darwin" ]
