@@ -46,3 +46,4 @@ fi
 
 vim -u "$HOME/.vimrc.bundles" +BundleInstall! +BundleClean +qall
 
+chmod -R g-w $HOME/.oh-my-zsh
