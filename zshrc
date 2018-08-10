@@ -78,8 +78,13 @@ alias cpan='cpanm'
 alias irssi='TERM=screen-256color irssi'
 alias parallel='parallel --citation'
 alias openssl_verify='openssl s_client -connect'
+alias k='kubectl'
+alias d='docker'
+alias de='docker exec -it'
+alias dl='docker logs -f'
+alias dr='docker run -it --rm'
 
-alias less='less -R'
+alias less='less -RFX'
 if [ `uname` != "Darwin" ]
 then
   alias ack='ack --color'
