@@ -111,3 +111,5 @@ type ndenv >/dev/null 2>&1 && eval "$(ndenv init -)"
 
 
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
