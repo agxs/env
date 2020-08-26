@@ -206,6 +206,13 @@ prompt_docker_host() {
   fi
 }
 
+prompt_k8s_context() {
+  context=$(kubectl config current-context 2>/dev/null)
+  if [[ ! -z "$context" ]]; then
+    prompt_segment red white "\xE2\x8E\x88: $context"
+  fi
+}
+
 # Status:
 # - was there an error
 # - am I root
@@ -236,6 +243,7 @@ build_prompt() {
 #  prompt_bzr
 #  prompt_hg
   prompt_docker_host
+  prompt_k8s_context
   prompt_end
 }
 
