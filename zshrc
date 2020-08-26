@@ -83,6 +83,7 @@ alias d='docker'
 alias de='docker exec -it'
 alias dl='docker logs -f'
 alias dr='docker run -it --rm'
+alias dc='docker-compose'
 
 alias less='less -RFX'
 if [ `uname` != "Darwin" ]
