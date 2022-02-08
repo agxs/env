@@ -206,10 +206,30 @@ prompt_docker_host() {
   fi
 }
 
+set_k8s_context() {
+  if [[ -n "$1" ]]; then
+    echo "$1" > $HOME/.kube/current-context
+    kubectl config use-context "$1"
+  else
+    echo 'Context name required'
+  fi
+}
+
+unset_k8s_context() {
+  if [[ -f "$HOME/.kube/current-context" ]]; then
+    rm -f $HOME/.kube/current-context 1>/dev/null
+    kubectl config unset current-context 1>/dev/null
+  else
+    echo "No context set"
+  fi
+}
+
 prompt_k8s_context() {
-  context=$(kubectl config current-context 2>/dev/null)
-  if [[ ! -z "$context" ]]; then
-    prompt_segment red white "\xE2\x8E\x88: $context"
+  if [[ -f "$HOME/.kube/current-context" ]]; then
+    local context=$(cat $HOME/.kube/current-context)
+    if [[ ! -z "$context" ]]; then
+      prompt_segment red white "\xE2\x8E\x88 $context"
+    fi
   fi
 }
 
