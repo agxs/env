@@ -255,6 +255,7 @@ function _kn() {
     COMPREPLY=($(compgen -W "${opts}" -- ${COMP_WORDS[COMP_CWORD]}))
     return 0
 }
+autoload bashcompinit && bashcompinit
 complete -F _kn set_k8s_context
 
 # Status:
