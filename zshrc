@@ -108,6 +108,7 @@ export BAT_THEME=OneHalfDark
 
 export DOCKER_BUILDKIT=1
 
+export PATH=$PATH:$HOME/src/env/bin
 # Set ZSH tab complete colours to be the same as ls
 zstyle ':completion:*:default' list-colors ${(s.:.)LS_COLORS}
 
