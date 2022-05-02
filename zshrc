@@ -31,7 +31,7 @@ CASE_SENSITIVE="true"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(sudo git mvn extract safe-paste docker colored-man-pages tmux ng)
+plugins=(sudo git mvn extract safe-paste docker colored-man-pages tmux ng kubectl)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -79,9 +79,6 @@ alias cpan='cpanm'
 alias irssi='TERM=screen-256color irssi'
 alias parallel='parallel --citation'
 alias openssl_verify='openssl s_client -connect'
-alias k='kubectl'
-alias ke='kubectl exec -it'
-alias kl='kubectl logs -f'
 alias k-unset='unset_k8s_context'
 alias k-set='set_k8s_context'
 alias d='docker'
