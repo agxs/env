@@ -112,8 +112,7 @@ export PATH=$PATH:$HOME/src/env/bin
 # Set ZSH tab complete colours to be the same as ls
 zstyle ':completion:*:default' list-colors ${(s.:.)LS_COLORS}
 
-export PATH=$HOME/.ndenv/bin:$HOME/src/env/bin:$PATH
-type ndenv >/dev/null 2>&1 && eval "$(ndenv init -)"
+eval "$(nodenv init -)"
 
 export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
 
