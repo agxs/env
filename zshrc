@@ -106,6 +106,8 @@ export LS_COLORS='rs=0:di=34:ln=36:mh=00:pi=33:so=35:do=35:bd=33:cd=33:or=31:su=
 
 export BAT_THEME=OneHalfDark
 
+export DOCKER_BUILDKIT=1
+
 # Set ZSH tab complete colours to be the same as ls
 zstyle ':completion:*:default' list-colors ${(s.:.)LS_COLORS}
 
