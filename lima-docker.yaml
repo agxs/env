@@ -17,6 +17,7 @@ images:
 - location: "https://cloud-images.ubuntu.com/impish/current/impish-server-cloudimg-arm64.img"
   arch: "aarch64"
 disk: "110GiB"
+memory: "8GiB"
 mounts:
 - location: "~"
   writable: true
@@ -38,16 +39,11 @@ provision:
     command -v docker >/dev/null 2>&1 && exit 0
     export DEBIAN_FRONTEND=noninteractive
     curl -fsSL https://get.docker.com | sh
-    # NOTE: you may remove the lines below, if you prefer to use rootful docker, not rootless
-    systemctl disable --now docker
-    apt-get install -y uidmap dbus-user-session
+    apt-get install nfs-common -y
 - mode: user
   script: |
     #!/bin/bash
-    set -eux -o pipefail
-    systemctl --user start dbus
-    dockerd-rootless-setuptool.sh install
-    docker context use rootless
+    sudo usermod -a -G docker $USER
 probes:
 - script: |
     #!/bin/bash
@@ -56,15 +52,12 @@ probes:
       echo >&2 "docker is not installed yet"
       exit 1
     fi
-    if ! timeout 30s bash -c "until pgrep rootlesskit; do sleep 3; done"; then
-      echo >&2 "rootlesskit (used by rootless docker) is not running"
-      exit 1
-    fi
   hint: See "/var/log/cloud-init-output.log". in the guest
 portForwards:
-- guestSocket: "/run/user/{{.UID}}/docker.sock"
+- guestSocket: "/var/run/docker.sock"
   hostSocket: "{{.Dir}}/sock/docker.sock"
 message: |
+  Before running any docker commands, this container needs to be restarted using limactl stop <vm> and limactl start <vm>.
   To run `docker` on the host (assumes docker-cli is installed), run the following commands:
   ------
   docker context create lima --docker "host=unix://{{.Dir}}/sock/docker.sock"
