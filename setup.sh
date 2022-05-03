@@ -18,6 +18,8 @@ ln -sf $HOME/src/env/inputrc $HOME/.inputrc
 ln -sf $HOME/src/env/zshrc $HOME/.zshrc
 ln -sf $HOME/src/env/agxs.zsh-theme $HOME/.oh-my-zsh/themes/agxs.zsh-theme
 ln -sf $HOME/src/env/agxs2.zsh-theme $HOME/.oh-my-zsh/themes/agxs2.zsh-theme
+ln -sf $HOME/src/env/agxs3.zsh-theme $HOME/.oh-my-zsh/themes/agxs3.zsh-theme
+ln -sf $HOME/src/env/agxs_kubernetes.zsh $HOME/.oh-my-zsh/lib/agxs_kubernetes.zsh
 ln -sf $HOME/src/env/tmux.conf $HOME/.tmux.conf
 ln -sf $HOME/src/env/ackrc $HOME/.ackrc
 if [[ -d "$HOME/.irssi" ]]; then
