@@ -112,7 +112,9 @@ export PATH=$PATH:$HOME/src/env/bin
 # Set ZSH tab complete colours to be the same as ls
 zstyle ':completion:*:default' list-colors ${(s.:.)LS_COLORS}
 
-eval "$(nodenv init -)"
+if [ -e "$HOME/.nodenv" ]; then
+  eval "$(nodenv init -)"
+fi
 
 export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
 
@@ -126,6 +128,8 @@ export PATH="$PATH:$HOME/.rvm/bin"
 export SDKMAN_DIR="$HOME/.sdkman"
 [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
 
-eval "$(pyenv init -)"
-eval "$(pyenv init --path)"
-eval "$(pyenv virtualenv-init -)"
+if [ -e "$HOME/.pyenv" ]; then
+  eval "$(pyenv init -)"
+  eval "$(pyenv init --path)"
+  eval "$(pyenv virtualenv-init -)"
+fi
