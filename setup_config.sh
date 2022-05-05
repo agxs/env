@@ -19,6 +19,7 @@ if [[ -d "$HOME/.irssi" ]]; then
 fi
 mkdir -p $HOME/.config/Code/User
 ln -sf $HOME/src/env/settings.json $HOME/.config/Code/User/settings.json
+ln -sf $HOME/src/env/starship.toml $HOME/.config/starship.toml
 
 # remove stupid ubuntu overlay scrollbars
 if [ -e "`which gsettings`" ]; then
