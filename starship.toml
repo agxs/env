@@ -1,7 +1,7 @@
 add_newline = false
 
 format = """\
-╭╴$kubernetes$directory$git_branch$git_commit$git_state$git_metrics$git_status$docker_context$cmd_duration
+╭╴$username$hostname$kubernetes$directory$git_branch$git_commit$git_state$git_metrics$git_status$docker_context$cmd_duration
 ╰─$jobs$sudo$character"""
 right_format = """$status"""
 
@@ -12,6 +12,13 @@ error_symbol = "[➤](bold red)"
 [directory]
 #home_symbol = "🏠"
 home_symbol = ""
+
+[username]
+format = "[$user@]($style)"
+style_user = "bold green"
+
+[hostname]
+style = "bold green"
 
 [docker_context]
 only_with_files = false
