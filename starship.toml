@@ -1,7 +1,7 @@
 add_newline = false
 
 format = """\
-╭╴$username$hostname$kubernetes$directory$git_branch$git_commit$git_state$git_metrics$git_status$docker_context$cmd_duration
+╭╴$username$hostname$directory$git_branch$git_commit$git_state$git_metrics$git_status$docker_context$kubernetes$cmd_duration
 ╰─$jobs$sudo$character"""
 right_format = """$status"""
 
@@ -25,7 +25,7 @@ only_with_files = false
 
 [kubernetes]
 disabled = false
-format = '[$symbol$context()]($style) in '
+format = 'in [$symbol$context()]($style) '
 
 [status]
 disabled = false
