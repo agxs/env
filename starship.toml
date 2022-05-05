@@ -1,0 +1,48 @@
+add_newline = false
+
+format = """\
+╭╴$kubernetes$directory$git_branch$git_commit$git_state$git_metrics$git_status$docker_context$cmd_duration
+╰─$jobs$sudo$character"""
+right_format = """$status"""
+
+[character]
+success_symbol = "[➤](bold green)"
+error_symbol = "[➤](bold red)"
+
+[directory]
+#home_symbol = "🏠"
+home_symbol = ""
+
+[docker_context]
+only_with_files = false
+
+[kubernetes]
+disabled = false
+format = '[$symbol$context()]($style) in '
+
+[status]
+disabled = false
+#format = "[$symbol $status]($style)"
+format = "[$status ↵]($style)"
+
+[git_branch]
+symbol = " "
+format = "on [$symbol$branch]($style) "
+truncation_length = 20
+truncation_symbol = "…/"
+style = "bold green"
+
+[git_status]
+format = '[\($all_status$ahead_behind\)]($style) '
+style = "bold green"
+conflicted = "🏳"
+up_to_date = " "
+untracked = "[](bold red) "
+ahead = "⇡${count}"
+diverged = "⇕⇡${ahead_count}⇣${behind_count}"
+behind = "⇣${count}"
+stashed = ""
+modified = "[]($bold red) "
+staged = '[++\($count\)](green)'
+renamed = "襁 "
+deleted = " "
