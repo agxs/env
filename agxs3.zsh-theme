@@ -37,7 +37,7 @@ function k8s_prompt_info() {
   if [[ -f "$HOME/.kube/current-context" ]]; then
     local context=$(cat $HOME/.kube/current-context)
     if [[ ! -z "$context" ]]; then
-      echo " %F{red}‹\xE2\x8E\x88 $context›%f"
+      echo " %F{red}‹%F{white}\xE2\x8E\x88 %F{red}$context›%f"
     fi
   fi
 }
