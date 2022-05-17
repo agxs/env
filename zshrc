@@ -106,6 +106,36 @@ export LS_COLORS='rs=0:di=34:ln=36:mh=00:pi=33:so=35:do=35:bd=33:cd=33:or=31:su=
 
 eval "$(starship init zsh)"
 
+# Kubernetes namespace autocomplete
+function _kn() {
+    local cur prev opts
+    case "$COMP_CWORD" in
+        1)
+            opts="$(kubectl config get-contexts -o name 2>/dev/null)"
+            ;;
+        2)
+            prev="${COMP_WORDS[COMP_CWORD-1]}"
+            [[ "$prev" = "." ]] && prev=$(kubectl config current-context)
+            [[ "$prev" = "-" ]] && return
+            if kubectl config get-contexts -o name | grep -q "^${prev}\$"
+            then
+                opts=$(kubectl --context=$prev get namespaces -o go-template --template='{{range .items}}{{.metadata.name}} {{end}}')
+            fi
+            ;;
+        *)
+            return
+            ;;
+    esac
+    COMPREPLY=($(compgen -W "${opts}" -- ${COMP_WORDS[COMP_CWORD]}))
+    return 0
+}
+
+autoload bashcompinit && bashcompinit
+complete -F _kn set_k8s_context
+
+
+
+
 export BAT_THEME=OneHalfDark
 
 export DOCKER_BUILDKIT=1
