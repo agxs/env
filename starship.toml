@@ -29,6 +29,7 @@ only_with_files = false
 [kubernetes]
 disabled = false
 #format = 'in [$symbol$context()]($style) '
+format = 'in [$symbol$context( \($namespace\))]($style) '
 style = "bold blue"
 
 [status]
