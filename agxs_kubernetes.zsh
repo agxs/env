@@ -16,3 +16,8 @@ function unset_k8s_context() {
   fi
 }
 
+function set_k8s_namespace() {
+  if [[ -n "$1" ]]; then
+    kubectl config set-context --current --namespace=$1
+  fi
+}
