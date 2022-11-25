@@ -159,6 +159,8 @@ if [ -e "$HOME/.pyenv" ]; then
   eval "$(pyenv init --path)"
   eval "$(pyenv virtualenv-init -)"
 fi
-. "/Users/aseales/.acme.sh/acme.sh.env"
+if [ -e "$HOME/.acme.sh" ]; then
+  . "/Users/aseales/.acme.sh/acme.sh.env"
+fi
 
 # zprof
