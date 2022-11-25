@@ -69,15 +69,8 @@ export PAGER=less
 
 alias enscript='enscript -2 -G -E -r -j'
 alias rm='rm -v'
-alias lui="rdesktop -g 1024x768 -u $USER -d ed -p - lui.edina.ac.uk"
-alias assynt1="rdesktop -g 1024x768 -u $USER -d ed -p - assynt1.edina.ac.uk"
-alias assynt2="rdesktop -g 1024x768 -u $USER -d ed -p - assynt2.edina.ac.uk"
-alias assynt3="rdesktop -g 1024x768 -u $USER -d ed -p - assynt3.edina.ac.uk"
-alias culmor1="rdesktop -g 1024x768 -u $USER -d ed -p - culmor1-at.edina.ac.uk"
-alias culmor2="rdesktop -g 1024x768 -u $USER -d ed -p - culmor2-at.edina.ac.uk"
 alias bc='bc -l'
 alias cpan='cpanm'
-alias irssi='TERM=screen-256color irssi'
 alias parallel='parallel --citation'
 alias openssl_verify='openssl s_client -connect'
 alias k-unset='unset_k8s_context'
@@ -156,7 +149,6 @@ export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
 
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 export PATH="$PATH:$HOME/.rvm/bin"
-# zprof
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="$HOME/.sdkman"
@@ -167,3 +159,6 @@ if [ -e "$HOME/.pyenv" ]; then
   eval "$(pyenv init --path)"
   eval "$(pyenv virtualenv-init -)"
 fi
+. "/Users/aseales/.acme.sh/acme.sh.env"
+
+# zprof

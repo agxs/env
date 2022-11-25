@@ -9,21 +9,12 @@ if [ "$OS" != "SunOS" -o "$AS_IP" == "$DLIBBAUER" ] ; then
 
   export EDITOR=vim
 
-  alias ispell='ispell -d british'
-  alias xterm='xterm -bg black -fg grey'
-  alias Eterm='Eterm --font-fx=none --cmod=90 --buttonbar=no --scrollbar=no'
   alias enscript='enscript -2 -G -E -r -j'
   alias grep='grep --color=auto'
   alias egrep='grep --color=auto'
   alias cgrep='grep --color=always'
   alias rm='rm -v'
   alias ssh='ssh -X'
-  alias lui='rdesktop -g 1024x768 -u aseales -d ed -p - lui.edina.ac.uk'
-  alias assynt1="rdesktop -g 1024x768 -u $USER -d ed -p - assynt1.edina.ac.uk"
-  alias assynt2="rdesktop -g 1024x768 -u $USER -d ed -p - assynt2.edina.ac.uk"
-  alias assynt3="rdesktop -g 1024x768 -u $USER -d ed -p - assynt3.edina.ac.uk"
-  alias culmor1="rdesktop -g 1024x768 -u $USER -d ed -p - culmor1-at.edina.ac.uk"
-  alias culmor2="rdesktop -g 1024x768 -u $USER -d ed -p - culmor2-at.edina.ac.uk"
 
   export LESS=-R
   export HISTSIZE=100000
