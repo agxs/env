@@ -1,5 +1,6 @@
 # zmodload zsh/zprof
 # Path to your oh-my-zsh configuration.
+DISABLE_AUTO_UPDATE="true"
 ZSH=$HOME/.oh-my-zsh
 
 # Set name of the theme to load.
