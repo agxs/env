@@ -94,6 +94,7 @@ else
   alias krb='kinit --kdc-hostname=EASE.ED.AC.UK aseales@EASE.ED.AC.UK'
   alias top='top -o cpu'
   alias chrome-debug='/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --remote-debugging-port=9222'
+  alias beep='echo -en "\007"'
   export JAVA_HOME=`/usr/libexec/java_home -v 17`
   export LSCOLORS=exgxbxdxcxegedabagacad
 fi
