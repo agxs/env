@@ -88,6 +88,7 @@ then
   alias ack='ack --color'
   alias ssh='ssh -X'
   alias vless='vim -u /usr/share/vim/vimcurrent/macros/less.vim'
+  test -d /home/linuxbrew/.linuxbrew && eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 else
   alias ack='ack --color'
   alias vless='vim -u /usr/share/vim/vim73/macros/less.vim'
