@@ -173,3 +173,7 @@ if [ -e "$HOME/.config/glab-cli" ]; then
 fi
 
 # zprof
+
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+
+export PATH=/opt/homebrew/opt/postgresql@15/bin:$PATH
