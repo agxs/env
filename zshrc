@@ -168,4 +168,8 @@ if [ -e "$HOME/.acme.sh" ]; then
   . "/Users/aseales/.acme.sh/acme.sh.env"
 fi
 
+if [ -e "$HOME/.config/glab-cli" ]; then
+  eval "$(glab completion -s zsh)"
+fi
+
 # zprof
