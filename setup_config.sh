@@ -18,7 +18,9 @@ ln -sf $HOME/src/env/agxs3.zsh-theme $HOME/.oh-my-zsh/themes/agxs3.zsh-theme
 ln -sf $HOME/src/env/agxs_kubernetes.zsh $HOME/.oh-my-zsh/lib/agxs_kubernetes.zsh
 ln -sf $HOME/src/env/tmux.conf $HOME/.tmux.conf
 ln -sf $HOME/src/env/ackrc $HOME/.ackrc
-ln -sf $HOME/src/env/nvim $HOME/.config/nvim
+if [[ ! -d "$HOME/.config/nvim/" ]]; then
+  ln -sf $HOME/src/env/nvim $HOME/.config/nvim
+fi
 if [[ -d "$HOME/.irssi" ]]; then
   ln -sf $HOME/src/env/solarized-universal.theme $HOME/.irssi/solarized-universal.theme
   ln -sf $HOME/src/env/irssi_config $HOME/.irssi/config
