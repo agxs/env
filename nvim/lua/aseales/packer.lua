@@ -50,4 +50,6 @@ return require('packer').startup(function(use)
   }
 
   use "terrortylor/nvim-comment"
+
+  use "lewis6991/gitsigns.nvim"
 end)
