@@ -144,26 +144,15 @@ export PATH=$PATH:$HOME/src/env/bin
 # Set ZSH tab complete colours to be the same as ls
 zstyle ':completion:*:default' list-colors ${(s.:.)LS_COLORS}
 
-if [ -e "$HOME/.nodenv" ]; then
-  eval "$(nodenv init -)"
-fi
-
 export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
+source /opt/homebrew/opt/asdf/libexec/asdf.sh
+
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 export PATH="$PATH:$HOME/.rvm/bin"
 
-#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
-export SDKMAN_DIR="$HOME/.sdkman"
-[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
-
-if [ -e "$HOME/.pyenv" ]; then
-  eval "$(pyenv init -)"
-  eval "$(pyenv init --path)"
-  eval "$(pyenv virtualenv-init -)"
-fi
 if [ -e "$HOME/.acme.sh" ]; then
   . "/Users/aseales/.acme.sh/acme.sh.env"
 fi
