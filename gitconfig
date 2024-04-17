@@ -1,0 +1,51 @@
+[color]
+  diff = auto
+  status = auto
+  branch = auto
+[user]
+  name = Andrew Seales
+  email = andrew.seales@ed.ac.uk
+  signingkey = /Users/aseales/.ssh/id_ed25519
+[alias]
+  co = checkout
+  br = branch
+  st = status
+  l = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'
+  bl = blame -w -C -C -C
+  fixup = "!git log -n 50 --pretty=format:'%h %s' --no-merges | fzf | cut -c -7 | xargs -o git commit --fixup"
+
+[core]
+  pager = delta
+  autocrlf = input
+  excludesfile = ~/.gitignore
+[push]
+  default = upstream
+  autoSetupRemote = true
+[status]
+  submoduleSummary = true
+[pull]
+  rebase = true
+[rebase]
+  autoStash = true
+  stat = true
+  autosquash = true
+[log]
+  follow = true
+[delta]
+  syntax-theme = Solarized (dark)
+[gpg]
+  format = ssh
+[commit]
+  gpgsign = true
+[gpg "ssh"]
+  allowedSignersFile = ~/.ssh/allowed_signers
+[filter "lfs"]
+  smudge = git-lfs smudge -- %f
+  process = git-lfs filter-process
+  required = true
+  clean = git-lfs clean -- %f
+[rerere]
+  enabled = true
+
+[includeIf "gitdir:~/src/"]
+  path = ~/.gitconfig-personal

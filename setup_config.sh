@@ -29,6 +29,10 @@ mkdir -p $HOME/.config/Code/User
 ln -sf $HOME/src/env/settings.json $HOME/.config/Code/User/settings.json
 ln -sf $HOME/src/env/starship.toml $HOME/.config/starship.toml
 
+ln -sf $HOME/src/env/gitconfig $HOME/.gitconfig
+ln -sf $HOME/src/env/gitconfig-personal $HOME/.gitconfig-personal
+ln -sf $HOME/src/env/gitignore $HOME/.gitignore
+
 # remove stupid ubuntu overlay scrollbars
 if [ -e "`which gsettings`" ]; then
   gsettings set com.canonical.desktop.interface scrollbar-mode normal
