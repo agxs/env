@@ -96,6 +96,10 @@ alias dr='docker run -it --rm'
 alias dc='docker-compose'
 alias -g DS="-o go-template='{{ range \$k, \$v := .data }}{{ \$k }}: {{ \$v | base64decode }}{{ \"\n\" }}{{ end }}'"
 
+unalias gcl
+alias gcv='glab ci view'
+alias gcl='glab ci list'
+
 alias less='less -RFX'
 if [ `uname` != "Darwin" ]
 then
