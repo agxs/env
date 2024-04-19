@@ -150,10 +150,7 @@ function _kn() {
 autoload bashcompinit && bashcompinit
 complete -F _kn set_k8s_context
 
-
-
-
-export BAT_THEME=OneHalfDark
+export BAT_THEME=DarkNeon
 
 export DOCKER_BUILDKIT=1
 
@@ -164,11 +161,11 @@ zstyle ':completion:*:default' list-colors ${(s.:.)LS_COLORS}
 export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+export FZF_DEFAULT_COMMAND="fd --hidden --strip-cwd-prefix --exclude .git"
+export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
+export FZF_ALT_C_COMMAND="fd --type=d --hidden --strip-cwd-prefix --exclude .git"
 
 source /opt/homebrew/opt/asdf/libexec/asdf.sh
-
-# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
-export PATH="$PATH:$HOME/.rvm/bin"
 
 if [ -e "$HOME/.acme.sh" ]; then
   . "/Users/aseales/.acme.sh/acme.sh.env"
@@ -181,5 +178,7 @@ fi
 # zprof
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+
+source ~/.fzf-git.sh/fzf-git.sh
 
 export PATH=/opt/homebrew/opt/postgresql@15/bin:$PATH
