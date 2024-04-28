@@ -166,7 +166,9 @@ export FZF_DEFAULT_COMMAND="fd --hidden --strip-cwd-prefix --exclude .git"
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 export FZF_ALT_C_COMMAND="fd --type=d --hidden --strip-cwd-prefix --exclude .git"
 
-source /opt/homebrew/opt/asdf/libexec/asdf.sh
+if [ -e "/opt/homebrew/bin/mise" ]; then
+  eval "$(/opt/homebrew/bin/mise activate zsh)"
+fi
 
 if [ -e "$HOME/.acme.sh" ]; then
   . "/Users/aseales/.acme.sh/acme.sh.env"
