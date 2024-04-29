@@ -5,6 +5,9 @@ vim.keymap.set({ "n", "v" }, "<Down>", "<Nop>", { noremap = true })
 vim.keymap.set({ "n", "v" }, "<Left>", "<Nop>", { noremap = true })
 vim.keymap.set({ "n", "v" }, "<Right>", "<Nop>", { noremap = true })
 
+vim.keymap.set("v", "<", "<gv")
+vim.keymap.set("v", ">", ">gv")
+
 vim.keymap.set("n", "<leader>w", ":w<CR>")
 
 -- opens file browser
