@@ -22,3 +22,6 @@ imap <C-c> <Esc>
 nmap <leader>s :%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>
 
 nmap <leader>a <action>(AddToHarpoon)
+
+set incsearch
+set scrolloff=8
