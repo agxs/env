@@ -101,6 +101,8 @@ unalias gcl
 alias gcv='glab ci view'
 alias gcl='glab ci list'
 
+alias sd='skaffold dev --tolerate-failures-until-deadline=true'
+
 alias less='less -RFX'
 if [ `uname` != "Darwin" ]
 then
@@ -182,6 +184,6 @@ fi
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
-source ~/.fzf-git.sh/fzf-git.sh
+[ -f ~/.fzf-git.sh/fzf-git.sh ] && source ~/.fzf-git.sh/fzf-git.sh
 
 export PATH=/opt/homebrew/opt/postgresql@15/bin:$PATH
