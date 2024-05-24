@@ -164,6 +164,7 @@ zstyle ':completion:*:default' list-colors ${(s.:.)LS_COLORS}
 export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+[[ ! -f ~/.fzf.zsh && -x "$(command -v fzf)" ]] && source <(fzf --zsh)
 export FZF_DEFAULT_COMMAND="fd --hidden --strip-cwd-prefix --exclude .git"
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 export FZF_ALT_C_COMMAND="fd --type=d --hidden --strip-cwd-prefix --exclude .git"
