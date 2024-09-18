@@ -76,7 +76,6 @@ bindkey '^Z' fancy-ctrl-z
 
 # Customize to your needs...
 
-export TERM=xterm-256color
 export EDITOR=vim
 export PAGER=less
 
@@ -188,3 +187,4 @@ test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell
 [ -f ~/.fzf-git.sh/fzf-git.sh ] && source ~/.fzf-git.sh/fzf-git.sh
 
 export PATH=/opt/homebrew/opt/postgresql@15/bin:$PATH
+
