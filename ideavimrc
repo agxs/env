@@ -25,3 +25,4 @@ nmap <leader>a <action>(AddToHarpoon)
 
 set incsearch
 set scrolloff=8
+set ignorecase
