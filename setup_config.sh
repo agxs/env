@@ -37,6 +37,7 @@ ln -sf $HOME/src/env/gitconfig $HOME/.gitconfig
 ln -sf $HOME/src/env/gitconfig-personal $HOME/.gitconfig-personal
 ln -sf $HOME/src/env/gitignore $HOME/.gitignore
 ln -sf $HOME/src/env/ideavimrc $HOME/.ideavimrc
+ln -sf $HOME/src/env/aerospace.toml $HOME/.aerospace.toml
 
 # remove stupid ubuntu overlay scrollbars
 if [ -e "`which gsettings`" ]; then
