@@ -151,6 +151,7 @@ alt-tab = 'workspace-back-and-forth'
 alt-shift-tab = 'move-workspace-to-monitor --wrap-around next'
 
 alt-shift-ctrl-cmd-f = 'fullscreen'
+alt-shift-ctrl-cmd-t = 'layout floating tiling'
 alt-shift-ctrl-cmd-e = 'focus-monitor right'
 alt-shift-ctrl-cmd-w = 'focus-monitor left'
 alt-shift-ctrl-cmd-b = 'balance-sizes'
