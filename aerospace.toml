@@ -160,6 +160,9 @@ alt-shift-ctrl-cmd-quote = 'move-node-to-workspace next'
 [[on-window-detected]]
     if.app-name-regex-substring = 'IntelliJ IDEA'
     run = 'layout floating'
+[[on-window-detected]]
+    if.app-id = 'com.toggl.daneel'
+    run = 'layout tiling'
 
 [workspace-to-monitor-force-assignment]
 1 = 'main'
