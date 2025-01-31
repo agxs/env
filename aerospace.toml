@@ -157,6 +157,8 @@ alt-shift-ctrl-cmd-w = 'focus-monitor left'
 alt-shift-ctrl-cmd-b = 'balance-sizes'
 alt-shift-ctrl-cmd-semicolon = 'move-node-to-workspace prev'
 alt-shift-ctrl-cmd-quote = 'move-node-to-workspace next'
+ctrl-left = 'workspace prev'
+ctrl-right = 'workspace next'
 
 [[on-window-detected]]
     if.app-name-regex-substring = 'IntelliJ IDEA'
