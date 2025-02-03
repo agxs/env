@@ -56,3 +56,9 @@ if [ -e "`which gconftool-2`" ]; then
 fi
 
 chmod -R g-w,o-w $HOME/.oh-my-zsh
+
+if [ `uname` == "Darwin" ]
+then
+  # ctrl + cmd window dragging
+  defaults write -g NSWindowShouldDragOnGesture -bool true
+fi
