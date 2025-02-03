@@ -135,7 +135,7 @@ alt-shift-6 = 'move-node-to-workspace 6'
 alt-shift-7 = 'move-node-to-workspace 7'
 alt-shift-8 = 'move-node-to-workspace 8'
 alt-shift-9 = 'move-node-to-workspace 9'
-alt-shift-0 = 'move-node-to-workspace 0'
+alt-shift-0 = 'move-node-to-workspace 10'
 
 alt-shift-ctrl-cmd-down = 'join-with down'
 alt-shift-ctrl-cmd-left = 'join-with left'
