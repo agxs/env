@@ -1,6 +1,6 @@
 local lsp_zero = require('lsp-zero')
 
-lsp_zero.on_attach(function(client, bufnr)
+local on_attach = lsp_zero.on_attach(function(client, bufnr)
 	vim.keymap.set("n", "gd", function() vim.lsp.buf.definition() end, { buffer = bufnr, remap = false, desc = "Goto definition"})
 	vim.keymap.set("n", "gr", function() vim.lsp.buf.references() end, { buffer = bufnr, remap = false, desc = "Goto references"})
 	vim.keymap.set("n", "K", function() vim.lsp.buf.hover() end, { buffer = bufnr, remap = false, desc = "Description"})
@@ -14,7 +14,7 @@ lsp_zero.on_attach(function(client, bufnr)
 	vim.keymap.set("i", "<C-h>", function() vim.lsp.buf.signature_help() end, { buffer = bufnr, remap = false, desc = "Signature help"})
 end)
 
--- to learn how to use mason.nvim with lsp-zero
+-- to learn how to use mason.nvim with lsp-zerolsp
 -- read this: https://github.com/VonHeikemen/lsp-zero.nvim/blob/v3.x/doc/md/guides/integrate-with-mason-nvim.md
 require('mason').setup({})
 require('mason-lspconfig').setup({
@@ -23,7 +23,14 @@ require('mason-lspconfig').setup({
 		lsp_zero.default_setup,
 		lua_ls = function()
 			local lua_opts = lsp_zero.nvim_lua_ls()
-			require('lspconfig').lua_ls.setup(lua_opts)
+			local lspconfig = require('lspconfig')
+      local capabilities = require("cmp_nvim_lsp").default_capabilities()
+      lspconfig.lua_ls.setup(lua_opts)
+      lspconfig.puppet.setup({
+        capabilities = capabilities,
+        on_attach = on_attach,
+        settings = { puppet = { editorServices = { formatOnType = { enable = true } } } },
+      })
 		end,
 	}
 })
