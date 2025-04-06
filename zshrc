@@ -155,6 +155,22 @@ function _kn() {
 autoload bashcompinit && bashcompinit
 complete -F _kn set_k8s_context
 
+# A cross-platform way to open a file or URL
+function xopen() {
+    item=$1
+    [[ -z "$item" ]] && echo "Usage: open <file or URL>" >&2 && return 1
+    if uname -r | grep -qi microsoft; then
+        powershell.exe -NoProfile -Command "Start-Process '$item'"
+    elif command -v xdg-open >/dev/null 2>&1; then
+        xdg-open "$item"
+    elif [ -e "$(which open)" ]; then
+        \open "$item"
+    else
+        echo "No suitable command found to open $item" >&2
+        return 1
+    fi
+}
+
 export BAT_THEME=DarkNeon
 
 export DOCKER_BUILDKIT=1
