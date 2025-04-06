@@ -1,4 +1,5 @@
 local lsp_zero = require('lsp-zero')
+local augroup = vim.api.nvim_create_augroup("LspFormatting", {})
 
 local on_attach = lsp_zero.on_attach(function(client, bufnr)
   vim.keymap.set("n", "gd", function() vim.lsp.buf.definition() end,
@@ -22,6 +23,20 @@ local on_attach = lsp_zero.on_attach(function(client, bufnr)
     { buffer = bufnr, remap = false, desc = "Rename symbol" })
   vim.keymap.set("i", "<C-h>", function() vim.lsp.buf.signature_help() end,
     { buffer = bufnr, remap = false, desc = "Signature help" })
+
+  if client.supports_method("textDocument/formatting") then
+    vim.api.nvim_clear_autocmds({
+      group = augroup,
+      buffer = bufnr,
+    })
+    vim.api.nvim_create_autocmd("BufWritePre", {
+      group = augroup,
+      buffer = bufnr,
+      callback = function()
+        vim.lsp.buf.format({ bufnr = bufnr })
+      end,
+    })
+  end
 end)
 
 -- to learn how to use mason.nvim with lsp-zerolsp
