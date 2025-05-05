@@ -101,6 +101,7 @@ alias gcv='glab ci view'
 alias gcl='glab ci list'
 alias gcmr='glab mr create -a aseales --fill --fill-commit-body --remove-source-branch'
 alias gcmra='glab mr merge'
+alias gcmrd='glab mr diff'
 
 alias sd='skaffold dev --tolerate-failures-until-deadline=true'
 
