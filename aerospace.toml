@@ -108,10 +108,10 @@ alt-shift-ctrl-cmd-k = 'focus up'
 alt-shift-ctrl-cmd-l = 'focus right'
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#move
-alt-shift-ctrl-cmd-u = 'move left'
-alt-shift-ctrl-cmd-i = 'move down'
-alt-shift-ctrl-cmd-o = 'move up'
-alt-shift-ctrl-cmd-p = 'move right'
+alt-shift-ctrl-cmd-y = 'move left'
+alt-shift-ctrl-cmd-u = 'move down'
+alt-shift-ctrl-cmd-i = 'move up'
+alt-shift-ctrl-cmd-o = 'move right'
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#resize
 alt-shift-ctrl-cmd-minus = 'resize smart -50'
