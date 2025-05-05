@@ -8,6 +8,8 @@ vmap K :m '<-2<CR>gv=gv
 xnoremap < <gv
 xnoremap > >gv
 
+nmap <leader>w :w<CR>
+
 xmap <leader>p \"_dP
 
 nmap <leader>y \"+y
