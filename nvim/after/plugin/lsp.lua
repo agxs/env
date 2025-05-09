@@ -24,6 +24,11 @@ local on_attach = lsp_zero.on_attach(function(client, bufnr)
   vim.keymap.set("i", "<C-h>", function() vim.lsp.buf.signature_help() end,
     { buffer = bufnr, remap = false, desc = "Signature help" })
 
+  -- format code using lsp
+  vim.keymap.set("n", "<leader>vf", function()
+    vim.lsp.buf.format()
+  end)
+
   if client.supports_method("textDocument/formatting") then
     vim.api.nvim_clear_autocmds({
       group = augroup,

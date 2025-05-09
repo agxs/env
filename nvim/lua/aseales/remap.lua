@@ -48,11 +48,6 @@ vim.keymap.set("v", "<leader>d", "\"_d")
 
 vim.keymap.set("i", "<C-c>", "<Esc>")
 
--- format code using lsp
-vim.keymap.set("n", "<leader>bf", function()
-  vim.lsp.buf.format()
-end)
-
 -- replace all words under cursor
 vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
 
