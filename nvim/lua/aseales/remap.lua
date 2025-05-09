@@ -11,7 +11,7 @@ vim.keymap.set("v", ">", ">gv")
 vim.keymap.set("n", "<leader>w", ":w<CR>")
 
 -- opens file browser
-vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
+vim.keymap.set("n", "<leader>fv", vim.cmd.Ex)
 -- opens undo tree
 vim.keymap.set("n", "<leader>u", vim.cmd.UndotreeToggle)
 
@@ -49,7 +49,7 @@ vim.keymap.set("v", "<leader>d", "\"_d")
 vim.keymap.set("i", "<C-c>", "<Esc>")
 
 -- format code using lsp
-vim.keymap.set("n", "<leader>f", function()
+vim.keymap.set("n", "<leader>bf", function()
   vim.lsp.buf.format()
 end)
 
@@ -58,4 +58,3 @@ vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><
 
 -- expands the current file dir
 vim.keymap.set("c", '%%', [[<C-R>=fnameescape(expand('%:h')).'/'<cr>]])
-
