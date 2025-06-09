@@ -4,11 +4,6 @@ if [ ! -d "$HOME/.oh-my-zsh" ]; then
   git clone https://github.com/robbyrussell/oh-my-zsh.git "$HOME/.oh-my-zsh"
 fi
 
-if [ ! -d "$HOME/.local/share/nvim/site/pack/packer/start/packer.nvim" ]; then
-  git clone --depth 1 https://github.com/wbthomason/packer.nvim\
-     ~/.local/share/nvim/site/pack/packer/start/packer.nvim
-fi
-
 if [ ! -d "$HOME/.fzf-git.sh/" ]; then
   git clone https://github.com/junegunn/fzf-git.sh.git $HOME/.fzf-git.sh
 fi
