@@ -61,6 +61,10 @@ unsetopt correct_all
   bindkey '^[[B' history-beginning-search-forward
 #fi
 
+#if [ -z "$INTELLIJ_ENVIRONMENT_READER" ]; then
+  #return
+#fi
+
 # Fast ctrl-z to re-enter vim
 fancy-ctrl-z () {
   if [[ $#BUFFER -eq 0 ]]; then
@@ -102,6 +106,8 @@ alias gcl='glab ci list'
 alias gcmr='glab mr create -a aseales --fill --fill-commit-body --remove-source-branch'
 alias gcmra='glab mr merge'
 alias gcmrd='glab mr diff'
+
+alias gsq='git rebase -i $(git merge-base $(git symbolic-ref --short HEAD) master)'
 
 alias sd='skaffold dev --tolerate-failures-until-deadline=true'
 
