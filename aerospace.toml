@@ -164,9 +164,9 @@ alt-shift-ctrl-cmd-quote = 'move-node-to-workspace next'
 ctrl-left = 'workspace prev'
 ctrl-right = 'workspace next'
 
-[[on-window-detected]]
-    if.app-name-regex-substring = 'IntelliJ IDEA'
-    run = 'layout floating'
+# [[on-window-detected]]
+#     if.app-name-regex-substring = 'IntelliJ IDEA'
+#     run = 'layout floating'
 [[on-window-detected]]
     if.app-id = 'com.toggl.daneel'
     run = 'layout tiling'
