@@ -123,7 +123,9 @@ else
   alias ack='ack --color'
   alias vless='vim -u /usr/share/vim/vim73/macros/less.vim'
   alias vim='/opt/homebrew/bin/nvim'
-  alias krb='kinit --kdc-hostname=EASE.ED.AC.UK aseales@EASE.ED.AC.UK'
+  if [[ -f $HOME/.zshrc-secrets ]]; then
+    source $HOME/.zshrc-secrets
+  fi
   alias top='top -o cpu'
   alias chrome-debug='/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --remote-debugging-port=9222'
   alias beep='echo -en "\007"'
