@@ -3,3 +3,5 @@
 [user]
   name = Andrew Seales
   email = agxs@frozenmercury.co.uk
+[commit]
+  gpgsign = false
