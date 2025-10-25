@@ -199,6 +199,9 @@ export FZF_ALT_C_COMMAND="fd --type=d --hidden --strip-cwd-prefix --exclude .git
 if [ -e "/opt/homebrew/bin/mise" ]; then
   eval "$(/opt/homebrew/bin/mise activate zsh)"
 fi
+if [ -e "/usr/bin/mise" ]; then
+  eval "$(/usr/bin/mise activate zsh)"
+fi
 
 if [ -e "$HOME/.acme.sh" ]; then
   . "/Users/aseales/.acme.sh/acme.sh.env"
