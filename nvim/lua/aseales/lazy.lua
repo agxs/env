@@ -45,7 +45,7 @@ return require('lazy').setup({
     opts = {},
   },
 
-  { 'nvim-treesitter/nvim-treesitter', lazy = false, build = ':TSUpdate' },
+  { 'nvim-treesitter/nvim-treesitter', branch = 'master', lazy = false, build = ':TSUpdate' },
   'theprimeagen/harpoon',
   'mbbill/undotree',
   'tpope/vim-rhubarb',
