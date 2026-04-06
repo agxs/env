@@ -1,2 +1,2 @@
-vim.keymap.set("n", "<leader>tt", vim.cmd.TroubleToggle, { desc = "Open trouble" } )
-vim.keymap.set("n", "<leader>tr", vim.cmd.TroubleRefresh, { desc = "Refresh trouble" } )
+vim.keymap.set("n", "<leader>tt", "<cmd>Trouble diagnostics toggle<cr>", { desc = "Toggle Trouble diagnostics" })
+vim.keymap.set("n", "<leader>tr", function() require("trouble").refresh() end, { desc = "Refresh Trouble" })
