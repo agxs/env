@@ -12,7 +12,7 @@ error_symbol = "[➤](bold red)"
 
 [directory]
 #home_symbol = "🏠"
-home_symbol = ""
+home_symbol = " "
 truncate_to_repo = false
 truncation_symbol = "…/"
 
@@ -38,7 +38,7 @@ disabled = false
 format = "[$status ↵]($style)"
 
 [git_branch]
-symbol = " "
+symbol = " "
 format = "on [$symbol$branch]($style) "
 truncation_length = 20
 truncation_symbol = "…/"
@@ -56,5 +56,5 @@ behind = "⇣${count}"
 stashed = ""
 modified = "[]($bold red) "
 staged = '[++\($count\)](green)'
-renamed = "襁 "
+renamed = "» "
 deleted = " "
