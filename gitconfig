@@ -22,7 +22,7 @@
   default = upstream
   autoSetupRemote = true
 [status]
-  submoduleSummary = true
+	submodulesummary = false
 [pull]
   rebase = true
 [rebase]
