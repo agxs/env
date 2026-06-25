@@ -127,6 +127,7 @@ else
     source $HOME/.zshrc-secrets
   fi
   alias top='top -o cpu'
+  alias sourcegit='/Applications/SourceGit.app/Contents/MacOS/SourceGit .'
   alias chrome-debug='/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --remote-debugging-port=9222'
   alias beep='echo -en "\007"'
   export JAVA_HOME=`/usr/libexec/java_home -v 17`
