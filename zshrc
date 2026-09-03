@@ -98,7 +98,7 @@ alias dl='docker logs -f'
 alias dr='docker run -it --rm'
 alias dc='docker-compose'
 alias -g DS="-o go-template='{{ range \$k, \$v := .data }}{{ \$k }}: {{ \$v | base64decode }}{{ \"\n\" }}{{ end }}'"
-alias cat='bat'
+alias cat='bat -p'
 
 unalias gcl
 alias gcv='glab ci view'
