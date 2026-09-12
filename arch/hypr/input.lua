@@ -1,0 +1,58 @@
+-- Keep only your personal input overrides here. Uncommented settings below
+-- replace Omarchy's defaults.
+
+-- Keyboard layout and options.
+-- See https://wiki.hypr.land/Configuring/Basics/Variables/#input
+hl.config({
+  input = {
+    -- Use multiple keyboard layouts and switch between them with Left Alt + Right Alt.
+    kb_layout = "gb",
+    kb_options = "compose:caps,shift:both_capslock_cancel,grp:alts_toggle",
+
+    -- Use a specific keyboard variant if needed (e.g. intl for international keyboards).
+    kb_variant = "mac",
+
+    -- Change speed of keyboard repeat.
+    repeat_rate = 40,
+    repeat_delay = 250,
+
+    -- Start with numlock on by default.
+    numlock_by_default = true,
+
+    -- Keep sensitivity neutral when using the custom acceleration curve.
+    sensitivity = 5.0,
+
+    -- Custom mouse acceleration curve migrated from input.conf.
+    accel_profile =
+    "custom 0.2144477506 0.000 0.051 0.102 0.179 0.257 0.334 0.418 0.535 0.652 0.769 0.886 1.003 1.120 1.237 1.354 1.471 1.588 1.705 1.823 2.064",
+
+    touchpad = {
+      -- Use natural (inverse) scrolling.
+      natural_scroll = true,
+
+      -- Use two-finger clicks for right-click instead of lower-right corner.
+      clickfinger_behavior = true,
+
+      -- Control the speed of your scrolling.
+      scroll_factor = 0.4,
+
+      -- Enable the touchpad while typing.
+      disable_while_typing = false,
+
+      -- Left-click-and-drag with three fingers.
+      drag_3fg = 1,
+    },
+  },
+})
+
+-- App-specific touchpad scroll speeds.
+-- o.window("(Alacritty|kitty|foot)", { scroll_touchpad = 1.5 })
+-- o.window("com.mitchellh.ghostty", { scroll_touchpad = 0.2 })
+
+-- Enable touchpad gestures for changing workspaces.
+-- See https://wiki.hypr.land/Configuring/Advanced-and-Cool/Gestures/
+-- hl.gesture({ fingers = 3, direction = "horizontal", action = "workspace" })
+
+-- Enable touchpad gestures for moving focus (helpful on scrolling layout).
+-- hl.gesture({ fingers = 3, direction = "left", action = function() hl.dispatch(hl.dsp.focus({ direction = "l" })) end })
+-- hl.gesture({ fingers = 3, direction = "right", action = function() hl.dispatch(hl.dsp.focus({ direction = "r" })) end })
