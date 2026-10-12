@@ -35,48 +35,51 @@ local hyper = "SUPER + SHIFT + ALT + CTRL"
 
 -- Remove Omarchy bindings replaced or disabled by the personal bindings below.
 local default_bindings_to_remove = {
-  "SUPER + W", -- Close window
-  "SUPER + J", -- Toggle window split
-  "SUPER + P", -- Pseudo window
-  "SUPER + T", -- Toggle window floating/tiling
-  "SUPER + F", -- Full screen (replaced with file manager)
-  "SUPER + CTRL + F", -- Tiled full screen
-  "SUPER + ALT + F", -- Full width
-  "SUPER + LEFT", -- Focus left
-  "SUPER + RIGHT", -- Focus right
-  "SUPER + UP", -- Focus up
-  "SUPER + DOWN", -- Focus down
-  "SUPER + TAB", -- Next workspace
-  "SUPER + SHIFT + TAB", -- Previous workspace
-  "SUPER + CTRL + TAB", -- Former workspace
-  "SUPER + SHIFT + LEFT", -- Swap window left
-  "SUPER + SHIFT + RIGHT", -- Swap window right
-  "SUPER + SHIFT + UP", -- Swap window up
-  "SUPER + SHIFT + DOWN", -- Swap window down
-  "ALT + TAB", -- Focus/reveal next window
-  "ALT + SHIFT + TAB", -- Focus/reveal previous window
-  "SUPER + code:20", -- Resize left (- key)
-  "SUPER + code:21", -- Resize right (= key)
-  "SUPER + SHIFT + code:20", -- Resize up
-  "SUPER + SHIFT + code:21", -- Resize down
-  "SUPER + G", -- Toggle window grouping
-  "SUPER + ALT + G", -- Move window out of group
-  "SUPER + ALT + LEFT", -- Move window into group on left
-  "SUPER + ALT + RIGHT", -- Move window into group on right
-  "SUPER + ALT + UP", -- Move window into group above
-  "SUPER + ALT + DOWN", -- Move window into group below
-  "SUPER + ALT + TAB", -- Next window in group
+  "SUPER + W",                 -- Close window
+  "SUPER + J",                 -- Toggle window split
+  "SUPER + P",                 -- Pseudo window
+  "SUPER + T",                 -- Toggle window floating/tiling
+  "SUPER + F",                 -- Full screen (replaced with file manager)
+  "SUPER + CTRL + F",          -- Tiled full screen
+  "SUPER + ALT + F",           -- Full width
+  "SUPER + LEFT",              -- Focus left
+  "SUPER + RIGHT",             -- Focus right
+  "SUPER + UP",                -- Focus up
+  "SUPER + DOWN",              -- Focus down
+  "SUPER + TAB",               -- Next workspace
+  "SUPER + SHIFT + TAB",       -- Previous workspace
+  "SUPER + CTRL + TAB",        -- Former workspace
+  "SUPER + SHIFT + LEFT",      -- Swap window left
+  "SUPER + SHIFT + RIGHT",     -- Swap window right
+  "SUPER + SHIFT + UP",        -- Swap window up
+  "SUPER + SHIFT + DOWN",      -- Swap window down
+  "ALT + TAB",                 -- Focus/reveal next window
+  "ALT + SHIFT + TAB",         -- Focus/reveal previous window
+  "SUPER + code:20",           -- Resize left (- key)
+  "SUPER + code:21",           -- Resize right (= key)
+  "SUPER + SHIFT + code:20",   -- Resize up
+  "SUPER + SHIFT + code:21",   -- Resize down
+  "SUPER + G",                 -- Toggle window grouping
+  "SUPER + ALT + G",           -- Move window out of group
+  "SUPER + ALT + LEFT",        -- Move window into group on left
+  "SUPER + ALT + RIGHT",       -- Move window into group on right
+  "SUPER + ALT + UP",          -- Move window into group above
+  "SUPER + ALT + DOWN",        -- Move window into group below
+  "SUPER + ALT + TAB",         -- Next window in group
   "SUPER + ALT + SHIFT + TAB", -- Previous window in group
-  "SUPER + S", -- Toggle scratchpad
-  "SUPER + mouse:272", -- Move window
-  "SUPER + mouse:273", -- Resize window
-  "SUPER + O", -- Pop window out
+  "SUPER + S",                 -- Toggle scratchpad
+  "SUPER + mouse:272",         -- Move window
+  "SUPER + mouse:273",         -- Resize window
+  "SUPER + O",                 -- Pop window out
 
   -- Application bindings replaced below.
   "SUPER + RETURN",
   "SUPER + SHIFT + RETURN",
   "SUPER + ALT + RETURN",
   "SUPER + SHIFT + B",
+
+  "SUPER + SHIFT + O", -- Obsidian
+  "SUPER + SHIFT + F", -- File manager (already available on SUPER + F)
 }
 
 for _, keys in ipairs(default_bindings_to_remove) do
