@@ -8,6 +8,7 @@ sudo pacman -S \
   zsh
 
 ln -sf ~/src/env/arch/alacritty $HOME/.config/alacritty
+ln -sf ~/src/env/arch/foot $HOME/.config/foot
 ln -sf ~/src/env/arch/waybar $HOME/.config/waybar
 ln -sf ~/src/env/arch/hypr $HOME/.config/hypr
 
